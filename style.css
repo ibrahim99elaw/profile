@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --bgcolor:#080e1c;
+    --textwhite:#fff;
+}
+.white-them{
+        --bgcolor:#fff;
+    --textwhite:#080e1c;
+}
+
+.hero{
+    height: 100vh;
+    background-color: var(--bgcolor);
+    overflow: hidden;
+}
+
+.hero header nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 100px;
+    align-items: center;
+} 
+.hero header nav .logo{
+    color: var(--textwhite);
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.hero header nav .logo span{
+    color: #23a3fe;
+}
+
+.hero header nav .nav-links a{
+    color: var(--textwhite);
+    margin: 0 20px;
+    transition: 0.5s;
+} 
+.hero header nav .nav-links a:hover{
+    color: #23a3fe;
+}
+
+.hero header nav i{
+    color: var(--textwhite);
+    font-size: 25px;
+    cursor:pointer;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    height: calc(100vh - 100px);
+    position: relative;
+}
+.container .text-info{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+.container .myimg{
+    position: absolute;
+    width: 34%;
+    bottom:90px;
+    margin-right: 50px;
+}
+.container .myimg img{
+    width: 100%;
+        border-radius: 500px;
+
+}
+
+.container .text-info h4{
+    color: #888;
+    font-size: 22px;
+}
+.container .text-info h1{
+    color: var(--textwhite);
+    font-size: 60px;
+    margin: 15px 0 10px;
+
+}
+.container .text-info h3
+    {
+    color: #23a3fe;
+    font-size: 25px;
+    font-weight: bold;
+}
+.container .text-info p{
+    color: var(--textwhite);
+    line-height:1.8 ;
+    margin: 20px 0 40px;
+}
+
+.container .text-info button{
+ color: #fff;
+ background-color: #23a3fe;
+ padding: 15px 30px;
+ border: 1px solid #23a3fe;
+ position: relative;
+ top: 0;
+ transition: 0.5s;
+}
+.container .text-info button:hover{
+    top: -8px;
+    box-shadow: 0 0 16px #23a3fe;
+    cursor: pointer;
+}
+.social-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.social-icon a{
+    color: #23a3fe;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.social-icon a:hover {
+    transform: scale(1.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container .text-info {
+        width: 60%;
+    }
+    .container .myimg {
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero header nav {
+        flex-direction: row;
+        height: auto;
+        /* display: none; */
+                /* margin-top: 100px; */
+
+
+    }
+    .hero header nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+    }
+  
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .text-info {
+        width: 80%;
+        margin-top: 50px;
+        text-align: center;
+        position: static;
+        top: 100px;
+        transform: none;
+
+    }
+        .container .text-info h4{
+            font-size: 30px;
+        }
+        .container .text-info .myname{
+            font-size: 60px;
+        }
+        .container .text-info .pragraph{
+            font-size: 25px;
+        }
+    .container .myimg {
+        width: 50%;
+        position: static;
+        margin: 20px 0;
+    }
+    .social-icon {
+        position: static;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+  
+
+    .container .text-info h1 {
+        font-size: 35px;
+    }
+    .container .text-info p {
+        font-size: 16px;
+    }
+    .container .text-info button {
+        padding: 10px 20px;
+        
+    }
+
+    .container .myimg{
+        margin-top: -10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero header nav {
+        flex-direction: column;
+    }
+
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30PX;
+    }
+    .container .text-info {
+        width: 90%;
+        margin-top: 50PX;
+        /* margin: 5px 0; */
+    }
+     .container .text-info h4{
+        font-size: 20px;
+     }
+     .container .text-info .myname{
+        font-size: 30px;
+     }
+     .container .text-info .pragraph{
+        font-size: 16px;
+        margin-bottom: 1px;
+     }
+    .container .myimg {
+        width: 70%;
+    }
+    .container  .social-icon {
+        margin-left: 80PX;
+    }
+}
